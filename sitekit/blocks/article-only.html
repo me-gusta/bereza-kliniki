@@ -1,0 +1,15 @@
+<article class="border-radius-10 background-white  margin-bottom-35px padding-30px">
+    <h1 class="heading-section">
+        <i class="fa fa-file-alt margin-right-10px"></i>
+        {{ props.title }}
+    </h1>
+    <hr>
+    {% if props.image %}
+    <div class="thumbnail margin-bottom-20px">
+        <img src="{{ props.image }}" alt="">
+    </div>
+    {% endif %}
+    <div class="entry-content">
+        {{ props.content | safe }}
+    </div>
+</article>

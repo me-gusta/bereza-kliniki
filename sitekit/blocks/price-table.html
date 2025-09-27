@@ -1,0 +1,36 @@
+{% macro price_table_entry(price_row) %}
+<div class="table__row row border-top-1 border-bottom-1 border-grey-1 padding-tb-10px">
+    <div class="col-sm-9">
+        <div class="row text-dark">
+            <div class="table__cell col-md-9 col-sm-7">{{ price_row.name }}</div>
+            <div class="table__cell col-md-3 col-sm-5">{{ price_row.price|safe }}</div>
+        </div>
+    </div>
+    <div class="table__cell col-sm-3">
+        <a href="tel:{{ org.tel }}"
+            class="btn btn-md border-0 border-radius-10 background-main-color padding-lr-20px text-white btn">
+            Позвонить
+        </a>
+    </div>
+</div>
+{% endmacro %}
+
+<section class="padding-tb-50px">
+    <div class="margin-bottom-30px container">
+        <div class="padding-30px background-white border-radius-20 box-shadow">
+            <h2 class="heading-section">
+                <i class="fa fa-tag margin-right-10px"></i> Услуги и цены
+            </h2>
+            <div class="container table">
+
+                {% for price_row in props.prices %}
+                    {{ price_table_entry(price_row) }}
+                {% endfor %}
+            </div>
+            <div class="container flex centered">
+                <a href="" class="text-primary">
+                    Посмотреть все цены</a>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,45 @@
+{
+  "index" : {
+    "layout": "base",
+    "blocks": [
+      "head",
+      "header",
+      "phone-buttons",
+      "banner",
+      "advantages",
+      "areas",
+      "mobile-widgets",
+      "price-table",
+      "article",
+      "form-section",
+      "faq",
+      "reviews",
+      "partners",
+      "contact"
+    ]
+  },
+  "price-and-contact": {
+    "blocks": [
+      "head",
+      "header",
+      "phone-buttons",
+      "banner",
+      "article-only",
+      "widgets-three",
+      "contact"
+    ]
+  },
+  "about-us": {
+    "blocks": [
+      "head",
+      "header",
+      "phone-buttons",
+      "banner",
+      "widgets",
+      "article",
+      "documents",
+      "doctors",
+      "contact"
+    ]
+  }
+}

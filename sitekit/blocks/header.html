@@ -1,0 +1,81 @@
+{% macro renderNode(node) %}
+
+    {% set page = node.nodeData %}
+
+    {% if node.children and node.children.length %}
+        <li class="has-dropdown">
+            <span class="header-link">
+                  <i class="fa fa-caret-down"></i>
+                  {{ page.label }}
+                </span>
+            <ul class="sub-menu">
+                {% for child in node.children %}
+                    {{ renderNode(child) }}
+                {% endfor %}
+            </ul>
+        </li>
+    {% else %}
+        {% if page.isHidden %}
+            <li class="sub-menu__heading">
+                <span>— Лечение зависимости —</span>
+            </li>
+        {% else %}
+            <li>
+                <a href="{{ page.href }}">{{ page.label }}</a>
+            </li>
+        {% endif %}
+    {% endif %}
+
+{% endmacro %}
+
+
+<header class="fixed-header fixed box-shadow">
+    <div class="header-main active">
+        <div class="container header-in">
+
+            <div class="row">
+                <div class="col-lg-2 col-md-12 mobile-header-block">
+                    <a id="logo" href="/" class="d-inline-block">
+                        <img class="desktop" src="/static/img/logo-1.png" alt="logo">
+                        <img class="mobile" src="/static/img/logo-mobile.png" alt="logo mobile">
+                    </a>
+                    <div class="mobile mobile-header-info">
+                        <span class="address">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            Самарская область, г. Тольятти, <br> ул. Громовой 35, строение 4
+                        </span>
+                        <a class="phone" href="tel:+7 (8482) 46 01 03">
+                            <i class="fa fa-phone text-small"></i>
+                            +7 (8482) 46-01-03
+                        </a>
+                    </div>
+                    <div class="mobile-toggle mobile-menu-toggle padding-13px background-main-color"><i
+                            class="fas fa-bars"></i></div>
+                </div>
+                <div class="col-lg-10 col-md-12 position-inherit">
+                    <ul id="menu-main" class="nav-menu float-lg-right link-padding-tb-20px">
+                        {% for node in pageTree.children %}
+
+                        {% if not node.nodeData.params.hideFromMenu %}
+                            {{ renderNode(node) }}
+                        {% endif %}
+
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="header-second desktop active">
+        <a  href="https://yandex.ru/maps/-/CCUwmLS0sD">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            Самарская область, г. Тольятти, ул. Громовой 35, строение 4
+        </a>
+        <a href="tel:{{ org.tel_2 }}">
+            <i class="fa fa-phone text-small"></i>
+            {{ org.tel_2 }}
+            <i class="fa fa-phone text-small"></i>
+        </a>
+    </div>
+</header>

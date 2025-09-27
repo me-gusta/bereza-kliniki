@@ -1,0 +1,55 @@
+<div class="modal" id="form-modal">
+    <div class="container height-100">
+        <div class="row height-100">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 flex centered">
+                <div class="callback-form padding-30px background-white border-radius-20 box-shadow">
+                    <h3 class="heading-section">
+                        <i class="fa fa-envelope margin-right-10px"></i> 
+                        Оставить заявку
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </h3>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6 margin-bottom-20px">
+                            <label>
+                                <i class="fa fa-user margin-right-10px"></i>
+                                Ваше Имя
+                            </label>
+                            <input type="text" name="name" class="form-control form-control-sm" placeholder="Имя">
+                        </div>
+                        <div class="col-md-6 margin-bottom-20px">
+                            <label>
+                                <i class="fa fa-phone margin-right-10px"></i>
+                                Телефон
+                            </label>
+                            <input type="phone" name="phone" class="form-control form-control-sm" placeholder="8-000-000-00-00">
+                        </div>
+                    </div>
+                    <div class="margin-bottom-20px">
+                        <textarea name="message" class="form-control" placeholder="Сообщение (по желанию)" rows="3"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <span class="callback-error text-danger">Произошла ошибка, попробуйте позже</span>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <span class="callback-success text-success">
+                                Ваше сообщение успешно отправлено
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col flex" style="gap:10px;justify-content:end">
+                            
+                            <button class="callback-send btn btn-md border-0 border-radius-10 background-main-color padding-lr-20px text-white margin-tb-10px">Отправить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</div>

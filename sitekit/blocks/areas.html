@@ -1,0 +1,53 @@
+<section class="padding-tb-50px background-grey-1">
+    <div class="container">
+        <!-- Title -->
+        <div class="row justify-content-center margin-bottom-45px">
+            <div class="col-lg-10">
+                <div class="row">
+                    <div class="col-md-4 wow fadeInUp">
+                        <h2 class="heading-section margin-tb-15px">
+                            Отделения
+                        </h2>
+                    </div>
+                    <div class="col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <p class="text-grey-2">
+                            В отделениях наркологии и психиатрии мы оказываем квалифицированную медицинскую помощь людям, страдающим наркологическими и психическими заболеваниями.
+                        </p>
+                    </div>
+                    <div class="col-md-2 wow fadeInUp" data-wow-delay="0.4s">
+                        <a href="/about-us" class="text-main-color margin-tb-15px d-inline-block"><span
+                                class="d-block float-left margin-right-10px margin-top-5px">
+                                    Подробнее</span> <i
+                                class="far fa-arrow-alt-circle-right text-large margin-top-7px"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // Title -->
+        <div class="row">
+
+            {% for item in props.items %}
+            <!-- Area -->
+            <a href="{{ item.page.href }}" class="doc col-lg-4 col-md-6 hvr-bob sm-mb-45px">
+                <div class="background-white box-shadow wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="doc-img-container thum">
+                        <div class="doc-overlay text-second-color">
+                            Узнать подробнее
+                        </div>
+                        <img src="{{ item.image }}" alt="">
+                    </div>
+                    <div class="padding-15px padding-top-10px flex-c text-center">
+                        <h5 class="margin-tb-15px">
+                            <span class="text-main-color text-huge" href="#">
+                                {{ item.page.label }}
+                            </span>
+                        </h5>
+                    </div>
+                </div>
+            </a>
+            <!-- // Area -->
+
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,92 @@
+<script src="/static/js/sticky-sidebar.js"></script>
+<script src="/static/js/owl.carousel.min.js"></script>
+<script src="/static/js/imagesloaded.min.js"></script>
+<script src="/static/js/wow.min.js"></script>
+<script src="/static/js/custom.js"></script>
+<script src="/static/js/popper.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script>
+    let csrfToken = '{{ org.csrf_token }}'
+
+    async function sendCallback(name, phone, message) {
+        let data = {
+            name: name,
+            phone: phone,
+            message: message
+        }
+        let resp = await fetch('/callback', {
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': csrfToken,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        return await resp.json()
+    }
+
+    $(document).ready(function () {
+        $('.callback-send').click(async function(){
+            let form = $(this).closest('.callback-form')
+            let showOk = form.find('.callback-success')
+            let showError = form.find('.callback-error')
+
+            showOk.fadeOut('fast')
+            showError.fadeOut('fast')
+
+
+            let name = form.find('input[name="name"]').val()
+            let phone = form.find('input[name="phone"]').val()
+            let message = form.find('[name="message"]').val()
+
+
+            let resp = await sendCallback(name, phone, message)
+            if (resp.status === 'ok') {
+                showOk.fadeIn('fast')
+            } else {
+                showError.fadeIn('fast')
+            }
+        })
+
+        $('.has-dropdown').click(function(){
+            let sub = $(this).find('.sub-menu')
+            let visible = sub.is(":visible")
+            if (!visible) {
+                sub.slideDown('fast')
+            } else {
+                sub.slideUp('fast')
+            }
+        })
+
+        let arrowBtn = $('.s-call-btn-arrow')
+        arrowBtn.click(function() {
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+        })
+        $(window).scroll(function (event) {
+            let scroll = $(window).scrollTop();
+            if (scroll > 500) {
+                arrowBtn.fadeIn('fast')
+            } else {
+                arrowBtn.fadeOut('slow')
+            }
+        });
+    })
+</script>
+<script>
+    window.ChatraSetup = {
+        buttonStyle: window.innerWidth < 991 ? 'tab' : 'tab',
+        buttonPosition: window.innerWidth < 991 ? 'br' : 'bl',
+        buttonSize: 50
+    };
+
+    (function(d, w, c) {
+        w.ChatraID = 'eyYg5Sy4bakfLjmn8';
+        var s = d.createElement('script');
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        s.async = true;
+        s.src = 'https://call.chatra.io/chatra.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'Chatra');
+</script>

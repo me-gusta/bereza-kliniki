@@ -1,0 +1,173 @@
+{
+  "areas": {
+    "placement": "content",
+    "schema": {
+      "items": {
+        "input": "Table",
+        "schema": {
+          "page": {},
+          "image": {}
+        },
+        "columns": [
+          {
+            "header": "Страница",
+            "cell": "SelectSearchable",
+            "field": "page",
+            "options": "includePages"
+          },
+          {
+            "header": "Фотография",
+            "cell": "ImageInput",
+            "field": "image"
+          }
+        ]
+      }
+    }
+  },
+  "article": {
+    "placement": "content",
+    "schema": {
+      "title": {
+        "input": "TextInput"
+      },
+      "image": {
+        "input": "ImageInput"
+      },
+      "content": {
+        "input": "MarkdownInput"
+      }
+    }
+  },
+  "article-only": {
+    "placement": "content",
+    "schema": {
+      "title": {
+        "input": "TextInput"
+      },
+      "image": {
+        "input": "ImageInput"
+      },
+      "content": {
+        "input": "MarkdownInput"
+      }
+    }
+  },
+  "banner": {
+    "placement": "content",
+    "schema": {
+      "title": {
+        "input": "TextInput"
+      }
+    }
+  },
+  "doctors": {
+    "placement": "content",
+    "schema": {
+      "doctors": {
+        "input": "Table",
+        "schema": {
+          "name": {},
+          "job": {}
+        },
+        "columns": [
+          {
+            "header": "Имя",
+            "cell": "TextInput",
+            "field": "name"
+          },
+          {
+            "header": "Подпись",
+            "cell": "TextInput",
+            "field": "job"
+          }
+        ]
+      }
+    }
+  },
+  "faq": {
+    "placement": "content",
+    "schema": {
+      "faqs": {
+        "input": "Table",
+        "schema": {
+          "question": {},
+          "answer": {}
+        },
+        "columns": [
+          {
+            "header": "Вопрос",
+            "cell": "TextInput",
+            "field": "question"
+          },
+          {
+            "header": "Ответ",
+            "cell": "TextInput",
+            "field": "answer"
+          }
+        ]
+      }
+    }
+  },
+  "head": {
+    "placement": "head",
+    "schema": {
+      "title": {
+        "input": "TextInput"
+      },
+      "description": {
+        "input": "TextArea"
+      }
+    }
+  },
+  "price-table": {
+    "placement": "content",
+    "schema": {
+      "prices": {
+        "input": "Table",
+        "schema": {
+          "name": {},
+          "price": {}
+        },
+        "columns": [
+          {
+            "header": "Услуга",
+            "cell": "TextInput",
+            "field": "name"
+          },
+          {
+            "header": "Стоимость",
+            "cell": "TextInput",
+            "field": "price"
+          }
+        ]
+      }
+    }
+  },
+  "reviews": {
+    "placement": "content",
+    "schema": {
+      "reviews_slug": {
+        "input": "TextInput"
+      },
+      "reviews": {
+        "input": "Table",
+        "schema": {
+          "name": {},
+          "text": {}
+        },
+        "columns": [
+          {
+            "header": "Имя",
+            "cell": "TextInput",
+            "field": "name"
+          },
+          {
+            "header": "Текст",
+            "cell": "TextInput",
+            "field": "text"
+          }
+        ]
+      }
+    }
+  }
+}

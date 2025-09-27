@@ -1,0 +1,36 @@
+{% macro one_faq(i, faq) -%}
+<li class="margin-bottom-20px" data-toggle="collapse" data-target="#collapseFaq{{i}}">
+    <div class="text-main-color text-extra-large padding-lr-10px">
+        <i class="fa fa-chevron-down xtext-grey-2" aria-hidden="true"></i>
+        <span>
+            {{ faq.question }}
+        </span>
+    </div>
+    <div class="faq-answer margin-top-30px collapse" id="collapseFaq{{i}}">
+        <p>
+            {{ faq.answer }}
+        </p>
+    </div>
+</li>
+{%- endmacro %}
+
+<section class="padding-tb-50px background-grey-1" id="section-faq">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="padding-30px background-white border-radius-20 box-shadow">
+                    <h2 class="heading-section">
+                        <i class="far fa-star margin-right-10px"></i>
+                        Вопрос-ответ
+                    </h2>
+                    <hr style="margin-bottom: 0;">
+                    <ul class="commentlist faq padding-0px margin-0px list-unstyled text-grey-3 clearfix">
+                        {% for faq in props.faqs %}
+                            {{ one_faq(loop.index, faq) }}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

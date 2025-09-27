@@ -1,0 +1,51 @@
+<section class="padding-tb-50px background-grey-1">
+    <div class="container">
+        <!-- Title -->
+        <div class="row justify-content-center margin-bottom-45px">
+            <div class="col-lg-10">
+                <div class="row">
+                    <div class="col-md-4 wow fadeInUp">
+                        <h2 class="heading-section margin-tb-15px">
+                            Врачи</h2>
+                    </div>
+                    <div class="col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <p class="text-grey-2">Наша команда медиков применяет современные методы лечения и использование передовой техники для обеспечения высокого уровня медицинской помощи.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- // Title -->
+    </div>
+
+    <div class="container mobile-scroller padding-tb-20px">
+        <div class="row">
+
+            {% for doctor in props.doctors %}
+            <!-- Doctor -->
+            <a href="#" class="doc col-2 hvr-bob">
+                <div class="background-white box-shadow wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="doc-img-container thum">
+                        <div class="doc-overlay text-second-color">
+                            Записаться
+                        </div>
+                        <img src="/static/img/doctors/{{ loop.index }}/.png" alt="">
+                    </div>
+                    <div class="padding-15px padding-top-10px min-height-140px flex-c" style="justify-content: start">
+                        <h5 class="margin-tb-15px">
+                            <span class="text-dark" href="#">
+                                {{ doctor.name }}
+                            </span>
+                        </h5>
+                        <span class="text-grey-2">
+                            {{ doctor.job }}
+                        </span>
+                    </div>
+                </div>
+            </a>
+            <!-- // Doctor -->
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,52 @@
+{% macro one_review(i, entry) -%}
+<li class="border-bottom-1 border-grey-1 margin-bottom-20px">
+    <div class="row">
+        <div class="col-12">
+            <img src="/static/img/reviews/{{ props.reviews_slug }}/{{ i }}.jpg"
+                class="float-left margin-right-20px border-radius-60 review-img" alt="">
+            <div class="margin-left-85px">
+                <span class="d-inline-block text-dark text-medium margin-right-20px">
+                    {{ entry.name|safe }}
+                </span>
+                <!-- <span class="text-extra-small">56 лет, Самара</span> -->
+                <div class="rating">
+                    <ul>
+                        <li class="active"></li>
+                        <li class="active"></li>
+                        <li class="active"></li>
+                        <li class="active"></li>
+                        {% if i < 2 %}
+                            <li></li>
+                        {% else %}
+                            <li class="active"></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <p class="margin-top-15px text-grey-2 text-justify">
+                {{ entry.text|safe }}
+            </p>
+        </div>
+    </div>
+</li>
+{%- endmacro %}
+
+
+<section class="padding-tb-50px" id="section-reviews">
+    <div class="container">
+        <div class="padding-30px background-white border-radius-20 box-shadow">
+            <h2 class="heading-section">
+                <i class="fa fa-comment margin-right-10px"></i>
+                Отзывы о нашей работе
+            </h2>
+            <hr>
+            <ul class="commentlist padding-0px margin-0px list-unstyled text-grey-3">
+                {% for review in props.reviews %}
+                {{ one_review(loop.index, review) }}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>
