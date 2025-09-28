@@ -27,7 +27,13 @@ async function sendTelegram(text, chatId) {
     return json
 }
 
+router.get('/hello', express.json(), async (req, res) => {
+    return res.json({ status: 'ok' })
+})
+
 router.post('/callback', express.json(), async (req, res) => {
+    return res.json({ status: 'ok' })
+
     try {
         const data = req.body
         const name = data?.name
