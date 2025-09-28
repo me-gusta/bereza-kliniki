@@ -17,7 +17,7 @@
       "contact"
     ]
   },
-  "price-and-contact": {
+  "contact": {
     "layout": "base",
     "blocks": [
       "head",
@@ -25,6 +25,19 @@
       "phone-buttons",
       "banner",
       "article-only",
+      "widgets-three",
+      "contact"
+    ]
+  },
+  "price": {
+    "layout": "base",
+    "blocks": [
+      "head",
+      "header",
+      "phone-buttons",
+      "banner",
+      "article-only",
+      "price-table-large",
       "widgets-three",
       "contact"
     ]
@@ -40,6 +53,18 @@
       "article",
       "documents",
       "doctors",
+      "contact"
+    ]
+  },
+  "answers": {
+    "layout": "base",
+    "blocks": [
+      "head",
+      "header",
+      "phone-buttons",
+      "banner",
+      "faq-all",
+      "widgets-three",
       "contact"
     ]
   }

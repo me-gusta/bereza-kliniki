@@ -4,12 +4,12 @@
         <div class="row justify-content-center margin-bottom-45px">
             <div class="col-lg-10">
                 <div class="row">
-                    <div class="col-md-4 wow fadeInUp">
+                    <div class="col-md-4 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
                         <h2 class="heading-section margin-tb-15px">
                             Врачи</h2>
                     </div>
-                    <div class="col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <p class="text-grey-2">Наша команда медиков применяет современные методы лечения и использование передовой техники для обеспечения высокого уровня медицинской помощи.
+                    <div class="col-md-6 wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                        <p class="text-grey-2">Наша команда медиков применяет современные методы лечения и использует передовую технику для обеспечения высокого уровня медицинской помощи.
                         </p>
                     </div>
 
@@ -22,30 +22,145 @@
     <div class="container mobile-scroller padding-tb-20px">
         <div class="row">
 
-            {% for doctor in props.doctors %}
+
             <!-- Doctor -->
-            <a href="#" class="doc col-2 hvr-bob">
-                <div class="background-white box-shadow wow fadeInUp" data-wow-delay="0.2s">
+            <span class="doc col-2 hvr-bob">
+                <div class="background-white box-shadow wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                     <div class="doc-img-container thum">
                         <div class="doc-overlay text-second-color">
                             Записаться
                         </div>
-                        <img src="/static/img/doctors/{{ loop.index }}/.png" alt="">
+                        <img src="/static/img/doctors/1.png" alt="">
                     </div>
                     <div class="padding-15px padding-top-10px min-height-140px flex-c" style="justify-content: start">
                         <h5 class="margin-tb-15px">
                             <span class="text-dark" href="#">
-                                {{ doctor.name }}
+                                Воронцов Юрий Геннадьевич
                             </span>
                         </h5>
                         <span class="text-grey-2">
-                            {{ doctor.job }}
+                            психиатр нарколог
                         </span>
                     </div>
                 </div>
-            </a>
+            </span>
             <!-- // Doctor -->
-            {% endfor %}
+
+            <!-- Doctor -->
+            <span class="doc col-2 hvr-bob">
+                <div class="background-white box-shadow wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                    <div class="doc-img-container thum">
+                        <div class="doc-overlay text-second-color">
+                            Записаться
+                        </div>
+                        <img src="/static/img/doctors/2.png" alt="">
+                    </div>
+                    <div class="padding-15px padding-top-10px min-height-140px flex-c" style="justify-content: start">
+                        <h5 class="margin-tb-15px">
+                            <span class="text-dark" href="#">
+                                Савицкий Александр Николаевич
+                            </span>
+                        </h5>
+                        <span class="text-grey-2">
+                            психиатр
+                        </span>
+                    </div>
+                </div>
+            </span>
+            <!-- // Doctor -->
+
+            <!-- Doctor -->
+            <span class="doc col-2 hvr-bob">
+                <div class="background-white box-shadow wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                    <div class="doc-img-container thum">
+                        <div class="doc-overlay text-second-color">
+                            Записаться
+                        </div>
+                        <img src="/static/img/doctors/3.png" alt="">
+                    </div>
+                    <div class="padding-15px padding-top-10px min-height-140px flex-c" style="justify-content: start">
+                        <h5 class="margin-tb-15px">
+                            <span class="text-dark" href="#">
+                                Маслова Наталья Андреевна
+                            </span>
+                        </h5>
+                        <span class="text-grey-2">
+                            психотерапевт
+                        </span>
+                    </div>
+                </div>
+            </span>
+            <!-- // Doctor -->
+
+            <!-- Doctor -->
+            <span class="doc col-2 hvr-bob">
+                <div class="background-white box-shadow wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                    <div class="doc-img-container thum">
+                        <div class="doc-overlay text-second-color">
+                            Записаться
+                        </div>
+                        <img src="/static/img/doctors/4.png" alt="">
+                    </div>
+                    <div class="padding-15px padding-top-10px min-height-140px flex-c" style="justify-content: start">
+                        <h5 class="margin-tb-15px">
+                            <span class="text-dark" href="#">
+                                Ушаков Петр Владимирович
+                            </span>
+                        </h5>
+                        <span class="text-grey-2">
+                            анестезиолог реаниматолог
+                        </span>
+                    </div>
+                </div>
+            </span>
+            <!-- // Doctor -->
+
+            <!-- Doctor -->
+            <span class="doc col-2 hvr-bob">
+                <div class="background-white box-shadow wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                    <div class="doc-img-container thum">
+                        <div class="doc-overlay text-second-color">
+                            Записаться
+                        </div>
+                        <img src="/static/img/doctors/5.png" alt="">
+                    </div>
+                    <div class="padding-15px padding-top-10px min-height-140px flex-c" style="justify-content: start">
+                        <h5 class="margin-tb-15px">
+                            <span class="text-dark" href="#">
+                                Ильин Никита Анатольевич
+                            </span>
+                        </h5>
+                        <span class="text-grey-2">
+                            фельдшер скорой помощи
+                        </span>
+                    </div>
+                </div>
+            </span>
+            <!-- // Doctor -->
+
+            <!-- Doctor -->
+            <span class="doc col-2 hvr-bob">
+                <div class="background-white box-shadow wow fadeInUp" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+                    <div class="doc-img-container thum">
+                        <div class="doc-overlay text-second-color">
+                            Записаться
+                        </div>
+                        <img src="/static/img/doctors/6.png" alt="">
+                    </div>
+                    <div class="padding-15px padding-top-10px min-height-140px flex-c" style="justify-content: start">
+                        <h5 class="margin-tb-15px">
+                            <span class="text-dark" href="#">
+                                Колоскова Марина Николаевна
+                            </span>
+                        </h5>
+                        <span class="text-grey-2">
+                            медсестра
+                        </span>
+                    </div>
+                </div>
+            </span>
+            <!-- // Doctor -->
+
         </div>
     </div>
 </section>
