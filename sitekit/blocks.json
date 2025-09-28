@@ -88,7 +88,7 @@
     "placement": "content",
     "schema": {
       "faqs": {
-        "input": "Table",
+        "input": "ItemsGroup",
         "schema": {
           "question": {},
           "answer": {}
@@ -101,7 +101,7 @@
           },
           {
             "header": "Ответ",
-            "cell": "TextInput",
+            "cell": "TextArea",
             "field": "answer"
           }
         ]
@@ -150,7 +150,7 @@
         "input": "TextInput"
       },
       "reviews": {
-        "input": "Table",
+        "input": "ItemsGroup",
         "schema": {
           "name": {},
           "text": {}
@@ -163,7 +163,7 @@
           },
           {
             "header": "Текст",
-            "cell": "TextInput",
+            "cell": "TextArea",
             "field": "text"
           }
         ]
