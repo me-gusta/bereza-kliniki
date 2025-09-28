@@ -6,7 +6,7 @@
 <script src="/static/js/popper.min.js"></script>
 <script src="/static/js/bootstrap.min.js"></script>
 <script>
-    let csrfToken = '{{ org.csrf_token }}'
+    let csrfToken = '{{ params.csrf_token }}'
 
     async function sendCallback(name, phone, message) {
         let data = {

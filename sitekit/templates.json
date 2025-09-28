@@ -14,11 +14,11 @@
       "form-section",
       "faq",
       "reviews",
-      "partners",
       "contact"
     ]
   },
   "price-and-contact": {
+    "layout": "base",
     "blocks": [
       "head",
       "header",
@@ -30,6 +30,7 @@
     ]
   },
   "about-us": {
+    "layout": "base",
     "blocks": [
       "head",
       "header",

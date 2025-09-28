@@ -1,5 +1,9 @@
 <head>
+    {% if page.params.hideTitleSuffix %}
     <title>{{ props.title }}</title>
+    {% else %}
+    <title>{{ props.title }} | Клиники наркологии и психиатрии</title>
+    {% endif %}
     <meta name="description" content="{{ props.description }}">
 
     <meta name="robots" content="index follow">

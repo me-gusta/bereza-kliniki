@@ -4,9 +4,9 @@
         {{ props.title }}
     </h1>
     <hr>
-    {% if props.image %}
+    {% if props.imageName %}
     <div class="thumbnail margin-bottom-20px">
-        <img src="{{ props.image }}" alt="">
+        <img src="/static/img/content/{{ props.imageName }}" alt="">
     </div>
     {% endif %}
     <div class="entry-content">

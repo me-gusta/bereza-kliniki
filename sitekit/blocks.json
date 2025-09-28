@@ -30,8 +30,8 @@
       "title": {
         "input": "TextInput"
       },
-      "image": {
-        "input": "ImageInput"
+      "imageName": {
+        "input": "TextInput"
       },
       "content": {
         "input": "MarkdownInput"
@@ -44,8 +44,8 @@
       "title": {
         "input": "TextInput"
       },
-      "image": {
-        "input": "ImageInput"
+      "imageName": {
+        "input": "TextInput"
       },
       "content": {
         "input": "MarkdownInput"
