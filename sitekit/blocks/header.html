@@ -55,11 +55,9 @@
                 <div class="col-lg-10 col-md-12 position-inherit">
                     <ul id="menu-main" class="nav-menu float-lg-right link-padding-tb-20px">
                         {% for node in pageTree.children %}
-
-                        {% if not node.nodeData.params.hideFromMenu %}
-                            {{ renderNode(node) }}
-                        {% endif %}
-
+                            {% if not node.nodeData.params.hideFromMenu %}
+                                {{ renderNode(node) }}
+                            {% endif %}
                         {% endfor %}
                     </ul>
                 </div>
