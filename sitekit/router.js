@@ -20,6 +20,7 @@ async function sendTelegram(text, chatId) {
     })
 
     const json = await res.json()
+    console.log(json)
     if (!json.ok) {
         const errText = json.description || 'Telegram sendMessage failed'
         throw new Error(errText)
@@ -32,8 +33,6 @@ router.get('/hello', express.json(), async (req, res) => {
 })
 
 router.post('/callback', express.json(), async (req, res) => {
-    return res.json({ status: 'ok' })
-
     try {
         const data = req.body
         const name = data?.name
